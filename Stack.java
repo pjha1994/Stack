@@ -41,6 +41,7 @@ public class Stack<T>{
             }
             currentNode.setNext(null);
             lastNode = currentNode;
+            nOfElements--;
             return lastNode.getData();
         }
     }
