@@ -1,3 +1,7 @@
+// Gokhan Arik
+//
+// Stack Implementation
+
 public class StackNode<T>{
 
     private T data;
