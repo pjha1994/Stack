@@ -24,34 +24,43 @@ public class Stack<T>{
             lastNode = newNode;
         }
         nOfElements++;
+        System.out.println( data + " added to Stack.\n");
     }
     
     public T top(){
         return lastNode.getData();
     }
     public T pop(){
+    	
+    	StackNode<T> removedNode = null;
+    	
         if( isEmpty() ){
             System.out.println("The Stack is empty");
             return null;
         }
         else{
             StackNode<T> currentNode = node;
-            while(currentNode.getNext() != lastNode){
+            do{
                 currentNode = currentNode.getNext();
-            }
+            }while( ( removedNode = currentNode.getNext() ) != lastNode);
+            
             currentNode.setNext(null);
             lastNode = currentNode;
             nOfElements--;
-            return lastNode.getData();
+            System.out.println( removedNode.getData() + " popped from Stack.\n");
+
+            return removedNode.getData();
         }
     }
 
     public void print(){
         
         StackNode<T> currentNode = node;
+        System.out.println("\tStack Contains");
+        System.out.println("\t---------------");
 
         while( currentNode!= null ){
-            System.out.println(currentNode.getData() + " ");
+            System.out.println("\t" +currentNode.getData() + " ");
             currentNode = currentNode.getNext();
         }
         System.out.println();

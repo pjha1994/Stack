@@ -6,10 +6,10 @@ public class StackTest{
 
     public static void main(String args[]){
        
-       System.out.println("Creating new Stack");
+       System.out.println("New Stack Created");
+       System.out.println("-----------------");
        Stack<String> testStack = new Stack<String>();
        
-       System.out.println("Adding element to Stack");
        testStack.push("Gokhan");
        testStack.print();
        testStack.push("Arik");
@@ -23,7 +23,8 @@ public class StackTest{
        testStack.push("ds");
        testStack.print();
        
-       System.out.println("Popping element from the Stack");
+       System.out.println("\nPopping element from the Stack");
+       System.out.println("------------------------------");
        testStack.pop();
        testStack.print();
        testStack.pop();
